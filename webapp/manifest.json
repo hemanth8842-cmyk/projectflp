@@ -1,0 +1,112 @@
+{
+  "_version": "1.83.0",
+  "sap.app": {
+    "id": "projectflp.projectflp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.22.0",
+      "toolsId": "88f359b5-2067-49d7-a709-cda5d0278052"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "employee-display": {
+          "semanticObject": "employee",
+          "action": "display",
+          "title": "{{employee-display.flpTitle}}",
+          "subTitle": "{{employee-display.flpSubtitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.146.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "projectflp.projectflp.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "projectflp.projectflp.view",
+        "async": true,
+        "viewPath": "projectflp.projectflp.view"
+      },
+      "routes": [
+        {
+          "name": "Routexml",
+          "pattern": ":?query:",
+          "target": [
+            "Targetxml"
+          ]
+        }
+      ],
+      "targets": {
+        "Targetxml": {
+          "id": "xml",
+          "name": "xml"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "projectflp.projectflp.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<mvc:View
+    controllerName="projectflp.projectflp.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <App>
+        <Page title="Employee Mock Data">
+            <content>
+                <VBox class="sapUiSmallMargin">
+
+                    <Label text="Name" />
+                    <Input value="{mock>/employee/name}" />
+
+                    <Label text="Email" />
+                    <Input value="{mock>/employee/email}" />
+
+                    <Label text="Phone" />
+                    <Input value="{mock>/employee/phone}" />
+
+                    <Label text="City" />
+                    <Input value="{mock>/employee/city}" />
+
+                </VBox>
+            </content>
+        </Page>
+    </App>
+</mvc:View>
