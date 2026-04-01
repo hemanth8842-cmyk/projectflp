@@ -4,25 +4,85 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
 
-    <App>
-        <Page title="Employee Mock Data">
+    <App id="myApp">
+
+        <Page
+            id="firstPage"
+            title="Employee Mock Data"
+            showFooter="true">
+
             <content>
                 <VBox class="sapUiSmallMargin">
 
                     <Label text="Name" />
-                    <Input value="{mock>/employee/name}" />
+                    <Input
+                        id="inpName"
+                        placeholder="Enter name"
+                        liveChange="onLiveChange" />
 
                     <Label text="Email" />
-                    <Input value="{mock>/employee/email}" />
+                    <Input
+                        id="inpEmail"
+                        placeholder="Enter email"
+                        liveChange="onLiveChange" />
 
                     <Label text="Phone" />
-                    <Input value="{mock>/employee/phone}" />
+                    <Input
+                        id="inpPhone"
+                        placeholder="Enter phone"
+                        liveChange="onLiveChange" />
 
                     <Label text="City" />
-                    <Input value="{mock>/employee/city}" />
+                    <Input
+                        id="inpCity"
+                        placeholder="Enter city"
+                        liveChange="onLiveChange" />
 
                 </VBox>
             </content>
+
+            <footer>
+                <Toolbar>
+                    <ToolbarSpacer />
+                    <Button
+                        id="submitBtn"
+                        text="Submit"
+                        type="Emphasized"
+                        enabled="false"
+                        press="onSubmit" />
+                    <Button
+                        text="Cancel"
+                        type="Reject"
+                        press="onCancel" />
+                </Toolbar>
+            </footer>
         </Page>
+
+        <Page
+            id="secondPage"
+            title="Image Page"
+            showNavButton="true"
+            navButtonPress="onPrevious">
+
+            <content>
+                <VBox class="sapUiSmallMargin" alignItems="Center" justifyContent="Center">
+
+                    <Image
+                        src="/image/office.jpeg"
+                        alt="Office Team"
+                        width="300px"
+                        height="200px"
+                        decorative="false"
+                        densityAware="false" />
+
+                    <Button
+                        text="Previous"
+                        type="Emphasized"
+                        class="sapUiSmallMarginTop"
+                        press="onPrevious" />
+                </VBox>
+            </content>
+        </Page>
+
     </App>
 </mvc:View>
